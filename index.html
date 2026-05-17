@@ -3,18 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>InnovaLAB BD - Future of Innovation</title>
+<title>InnovaLAB BD - Future of Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 <style>
 :root {
   --blue-dark: #0a2a5e;
   --blue-main: #1a4db5;
-  --blue-light: #e8f0ff;
   --orange: #f47c00;
   --orange-dark: #c25f00;
-  --cream: #f0f4ff;
   --green: #1a8c1a;
   --white: #fff;
   --text: #1a1a1a;
@@ -23,174 +20,45 @@
 body { font-family:'Hind Siliguri',sans-serif; background:#f4f7ff; color:var(--text); overflow-x:hidden; }
 a { text-decoration:none; }
 
-/* ── TOPBAR ── */
-.topbar {
-  background: linear-gradient(135deg, #0a2a5e, #1a4db5);
-  color:#fff;
-  text-align:center;
-  padding:10px 20px;
-  font-size:0.92rem;
-  font-weight:500;
-  letter-spacing:0.3px;
-}
+.topbar { background:linear-gradient(135deg,#0a2a5e,#1a4db5); color:#fff; text-align:center; padding:10px 20px; font-size:0.92rem; font-weight:500; }
 .topbar span { color:#ffd966; font-weight:700; }
 
-/* ── NAVBAR ── */
-.navbar {
-  background:#fff;
-  box-shadow:0 2px 12px rgba(0,0,0,0.1);
-  padding:14px 24px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  position:sticky;
-  top:0;
-  z-index:100;
-}
-.logo { font-size:1.5rem; font-weight:700; color:var(--blue-dark); }
-.logo span { color:var(--orange); }
+.navbar { background:#fff; box-shadow:0 2px 12px rgba(0,0,0,0.1); padding:14px 24px; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; z-index:100; }
 .nav-links { display:flex; gap:20px; }
 .nav-links a { font-weight:600; color:var(--blue-dark); font-size:0.95rem; transition:color 0.2s; }
 .nav-links a:hover { color:var(--orange); }
 @media(max-width:600px){ .nav-links { display:none; } }
 
-/* ── HERO ── */
-.hero {
-  background: linear-gradient(135deg, #0a2a5e 0%, #1a4db5 60%, #2d6fe8 100%);
-  padding: 52px 20px 44px;
-  text-align:center;
-  color:#fff;
-  position:relative;
-  overflow:hidden;
-}
-.hero::before {
-  content:'';
-  position:absolute;
-  width:500px; height:500px;
-  background:rgba(255,255,255,0.04);
-  border-radius:50%;
-  top:-200px; right:-150px;
-}
-.hero h1 {
-  font-size:clamp(1.4rem,3.5vw,2.3rem);
-  font-weight:700;
-  line-height:1.4;
-  margin-bottom:14px;
-}
+.hero { background:linear-gradient(135deg,#0a2a5e 0%,#1a4db5 60%,#2d6fe8 100%); padding:52px 20px 44px; text-align:center; color:#fff; position:relative; overflow:hidden; }
+.hero::before { content:''; position:absolute; width:500px; height:500px; background:rgba(255,255,255,0.04); border-radius:50%; top:-200px; right:-150px; }
+.hero h1 { font-size:clamp(1.4rem,3.5vw,2.3rem); font-weight:700; line-height:1.4; margin-bottom:14px; }
 .hero h1 span { color:#ffd966; }
-.hero p {
-  font-size:clamp(0.95rem,2vw,1.15rem);
-  color:#b8d4ff;
-  margin-bottom:28px;
-  max-width:600px;
-  margin-left:auto; margin-right:auto;
-}
+.hero p { font-size:clamp(0.95rem,2vw,1.15rem); color:#b8d4ff; margin-bottom:28px; max-width:600px; margin-left:auto; margin-right:auto; }
 .hero-btns { display:flex; gap:14px; justify-content:center; flex-wrap:wrap; }
-.btn-primary {
-  background:linear-gradient(135deg,#f47c00,#c25f00);
-  color:#fff;
-  font-family:'Hind Siliguri',sans-serif;
-  font-size:1.05rem;
-  font-weight:700;
-  padding:15px 36px;
-  border-radius:10px;
-  border:none;
-  cursor:pointer;
-  box-shadow:0 4px 16px rgba(244,124,0,0.4);
-  transition:transform 0.18s;
-}
+.btn-primary { background:linear-gradient(135deg,#f47c00,#c25f00); color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:1.05rem; font-weight:700; padding:15px 36px; border-radius:10px; border:none; cursor:pointer; box-shadow:0 4px 16px rgba(244,124,0,0.4); transition:transform 0.18s; }
 .btn-primary:hover { transform:translateY(-2px); }
-.btn-secondary {
-  background:rgba(255,255,255,0.15);
-  color:#fff;
-  font-family:'Hind Siliguri',sans-serif;
-  font-size:1.05rem;
-  font-weight:600;
-  padding:15px 36px;
-  border-radius:10px;
-  border:2px solid rgba(255,255,255,0.4);
-  cursor:pointer;
-  transition:background 0.2s;
-}
+.btn-secondary { background:rgba(255,255,255,0.15); color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:1.05rem; font-weight:600; padding:15px 36px; border-radius:10px; border:2px solid rgba(255,255,255,0.4); cursor:pointer; transition:background 0.2s; }
 .btn-secondary:hover { background:rgba(255,255,255,0.25); }
 
-/* ── FEATURES ── */
-.features {
-  display:flex;
-  justify-content:center;
-  gap:16px;
-  flex-wrap:wrap;
-  padding:28px 20px;
-  background:#fff;
-  border-bottom:2px solid #eef2ff;
-}
-.feat {
-  display:flex;
-  align-items:center;
-  gap:10px;
-  font-weight:600;
-  font-size:0.92rem;
-  color:var(--blue-dark);
-}
+.features { display:flex; justify-content:center; gap:16px; flex-wrap:wrap; padding:28px 20px; background:#fff; border-bottom:2px solid #eef2ff; }
+.feat { display:flex; align-items:center; gap:10px; font-weight:600; font-size:0.92rem; color:var(--blue-dark); }
 .feat .icon { font-size:1.5rem; }
 
-/* ── SECTION TITLE ── */
-.section-title {
-  text-align:center;
-  padding:36px 20px 24px;
-}
-.section-title h2 {
-  font-size:clamp(1.3rem,3vw,1.9rem);
-  color:var(--blue-dark);
-  font-weight:700;
-  margin-bottom:8px;
-}
+.section-title { text-align:center; padding:36px 20px 24px; }
+.section-title h2 { font-size:clamp(1.3rem,3vw,1.9rem); color:var(--blue-dark); font-weight:700; margin-bottom:8px; }
 .section-title p { color:#555; font-size:0.97rem; }
-.title-line {
-  width:60px; height:4px;
-  background:linear-gradient(135deg,var(--orange),#f4a800);
-  border-radius:2px;
-  margin:10px auto 0;
-}
+.title-line { width:60px; height:4px; background:linear-gradient(135deg,var(--orange),#f4a800); border-radius:2px; margin:10px auto 0; }
 
-/* ── PRODUCTS ── */
 .products-section { background:#f4f7ff; padding-bottom:40px; }
-.products-grid {
-  display:grid;
-  grid-template-columns:repeat(auto-fill,minmax(280px,1fr));
-  gap:20px;
-  max-width:1100px;
-  margin:0 auto;
-  padding:0 20px;
-}
-.product-card {
-  background:#fff;
-  border-radius:16px;
-  overflow:hidden;
-  box-shadow:0 4px 18px rgba(0,0,0,0.08);
-  transition:transform 0.2s, box-shadow 0.2s;
-  cursor:pointer;
-}
+.products-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(280px,1fr)); gap:20px; max-width:1100px; margin:0 auto; padding:0 20px; }
+.product-card { background:#fff; border-radius:16px; overflow:hidden; box-shadow:0 4px 18px rgba(0,0,0,0.08); transition:transform 0.2s,box-shadow 0.2s; }
 .product-card:hover { transform:translateY(-4px); box-shadow:0 10px 32px rgba(0,0,0,0.14); }
-.product-img {
-  width:100%; height:190px;
-  display:flex; align-items:center; justify-content:center;
-  font-size:5rem;
-  position:relative;
-  overflow:hidden;
-}
+.product-img { width:100%; height:190px; display:flex; align-items:center; justify-content:center; font-size:5rem; position:relative; overflow:hidden; }
 .product-img.blue-bg { background:linear-gradient(135deg,#0a2a5e,#2d6fe8); }
 .product-img.orange-bg { background:linear-gradient(135deg,#c25f00,#f4a800); }
 .product-img.green-bg { background:linear-gradient(135deg,#0a5e2a,#1a8c4a); }
 .product-img.purple-bg { background:linear-gradient(135deg,#3a0a5e,#7a2db5); }
-.badge-new, .badge-hot, .badge-sale {
-  position:absolute; top:12px; left:12px;
-  padding:4px 12px;
-  border-radius:20px;
-  font-size:0.75rem;
-  font-weight:700;
-  color:#fff;
-}
+.badge-new,.badge-hot,.badge-sale { position:absolute; top:12px; left:12px; padding:4px 12px; border-radius:20px; font-size:0.75rem; font-weight:700; color:#fff; }
 .badge-new { background:#1a8c1a; }
 .badge-hot { background:#d42020; }
 .badge-sale { background:var(--orange); }
@@ -199,253 +67,95 @@ a { text-decoration:none; }
 .product-name { font-size:1.05rem; font-weight:700; color:var(--blue-dark); margin-bottom:6px; line-height:1.3; }
 .product-desc { font-size:0.85rem; color:#555; line-height:1.5; margin-bottom:14px; }
 .specs { display:flex; flex-wrap:wrap; gap:6px; margin-bottom:14px; }
-.spec-tag {
-  background:#eef2ff;
-  color:var(--blue-main);
-  font-size:0.75rem;
-  font-weight:600;
-  padding:4px 10px;
-  border-radius:20px;
-}
-.product-footer {
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  border-top:1px solid #eee;
-  padding-top:14px;
-  margin-top:4px;
-}
+.spec-tag { background:#eef2ff; color:var(--blue-main); font-size:0.75rem; font-weight:600; padding:4px 10px; border-radius:20px; }
+.product-footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid #eee; padding-top:14px; margin-top:4px; }
 .price-box .old-price { font-size:0.82rem; color:#aaa; text-decoration:line-through; }
 .price-box .new-price { font-size:1.25rem; font-weight:700; color:var(--orange); }
-.btn-order {
-  background:linear-gradient(135deg,#1a4db5,#0a2a5e);
-  color:#fff;
-  font-family:'Hind Siliguri',sans-serif;
-  font-size:0.88rem;
-  font-weight:700;
-  padding:10px 18px;
-  border-radius:8px;
-  border:none;
-  cursor:pointer;
-  transition:transform 0.18s;
-}
+.btn-order { background:linear-gradient(135deg,#1a4db5,#0a2a5e); color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:0.88rem; font-weight:700; padding:10px 18px; border-radius:8px; border:none; cursor:pointer; transition:transform 0.18s; }
 .btn-order:hover { transform:translateY(-1px); }
 
-/* ── REVIEWS ── */
 .reviews-section { background:#fff; padding:10px 20px 40px; overflow:hidden; }
 .reviews-track-wrap { overflow:hidden; }
-.reviews-track {
-  display:flex; gap:18px;
-  animation:slide 24s linear infinite;
-  width:max-content;
-}
+.reviews-track { display:flex; gap:18px; animation:slide 24s linear infinite; width:max-content; }
 .reviews-track:hover { animation-play-state:paused; }
-@keyframes slide {
-  0%   { transform:translateX(0); }
-  100% { transform:translateX(-50%); }
-}
-.review-card {
-  background:linear-gradient(145deg,#0a2a5e,#1a4db5);
-  border-radius:14px;
-  padding:20px 18px;
-  width:280px;
-  flex-shrink:0;
-  color:#fff;
-  box-shadow:0 4px 18px rgba(0,0,0,0.15);
-}
+@keyframes slide { 0%{transform:translateX(0);} 100%{transform:translateX(-50%);} }
+.review-card { background:linear-gradient(145deg,#0a2a5e,#1a4db5); border-radius:14px; padding:20px 18px; width:280px; flex-shrink:0; color:#fff; box-shadow:0 4px 18px rgba(0,0,0,0.15); }
 .review-card .r-name { font-weight:700; font-size:0.9rem; color:#ffd966; margin-bottom:6px; }
 .review-card p { font-size:0.83rem; color:#b8d4ff; line-height:1.5; }
 .review-card .r-stars { color:#ffd700; margin-top:10px; font-size:1.1rem; }
 
-/* ── CONTACT ── */
 .contact-wrap { max-width:800px; margin:0 auto; padding:24px 20px; display:flex; flex-direction:column; gap:12px; }
-.contact-bar {
-  border-radius:10px;
-  padding:18px 24px;
-  text-align:center;
-  font-weight:700;
-  font-size:clamp(0.95rem,2vw,1.1rem);
-  display:block;
-  color:#fff;
-}
+.contact-bar { border-radius:10px; padding:18px 24px; text-align:center; font-weight:700; font-size:clamp(0.95rem,2vw,1.1rem); display:block; color:#fff; }
 .contact-bar.phone { background:linear-gradient(135deg,#0a2a5e,#1a4db5); }
 .contact-bar.whatsapp { background:linear-gradient(135deg,#128c1e,#25d366); }
 .contact-bar span { color:#ffd966; }
 
-/* ── ORDER FORM ── */
 .order-wrap { padding:0 16px 40px; }
-.order-box {
-  background:#eef2ff;
-  border:3px solid var(--blue-main);
-  border-radius:16px;
-  max-width:880px;
-  margin:0 auto;
-  padding:32px 28px;
-}
-.order-box h2 {
-  color:var(--blue-dark);
-  font-size:clamp(1rem,2.2vw,1.3rem);
-  font-weight:700;
-  text-align:center;
-  margin-bottom:22px;
-  line-height:1.5;
-}
+.order-box { background:#eef2ff; border:3px solid var(--blue-main); border-radius:16px; max-width:880px; margin:0 auto; padding:32px 28px; }
+.order-box h2 { color:var(--blue-dark); font-size:clamp(1rem,2.2vw,1.3rem); font-weight:700; text-align:center; margin-bottom:22px; line-height:1.5; }
 .pkg-label { font-weight:600; font-size:1rem; margin-bottom:14px; }
 .pkg-grid { display:grid; grid-template-columns:1fr 1fr; gap:12px; margin-bottom:14px; }
 @media(max-width:580px){ .pkg-grid { grid-template-columns:1fr; } }
-.pkg-opt {
-  border:2px solid #ccc;
-  border-radius:10px;
-  padding:14px 14px;
-  display:flex;
-  align-items:flex-start;
-  gap:10px;
-  background:#fff;
-  cursor:pointer;
-  position:relative;
-  transition:border-color 0.2s;
-}
+.pkg-opt { border:2px solid #ccc; border-radius:10px; padding:14px; display:flex; align-items:flex-start; gap:10px; background:#fff; cursor:pointer; position:relative; transition:border-color 0.2s; }
 .pkg-opt.selected { border-color:var(--blue-main); background:#f0f4ff; }
-.pkg-opt .badge-pkg {
-  position:absolute; top:0; right:0;
-  background:linear-gradient(135deg,var(--orange),#f4a800);
-  color:#fff; font-size:0.7rem; font-weight:700;
-  padding:4px 10px; border-radius:0 8px 0 8px;
-}
+.pkg-opt .badge-pkg { position:absolute; top:0; right:0; background:linear-gradient(135deg,var(--orange),#f4a800); color:#fff; font-size:0.7rem; font-weight:700; padding:4px 10px; border-radius:0 8px 0 8px; }
 .pkg-opt input[type=radio] { accent-color:var(--blue-main); margin-top:3px; }
 .pkg-opt .info .p-name { font-weight:700; font-size:0.97rem; color:var(--blue-dark); }
 .pkg-opt .info .p-note { font-size:0.8rem; color:#666; margin-top:2px; }
 .pkg-opt .info .p-amount { font-weight:700; color:var(--orange); font-size:1rem; margin-top:4px; }
+
+/* ── QUANTITY ── */
+.qty-box { background:#fff; border:1.5px solid #ddd; border-radius:10px; padding:14px 16px; margin-bottom:14px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:10px; }
+.qty-box-label { font-weight:600; font-size:0.97rem; color:var(--blue-dark); }
+.qty-controls { display:flex; align-items:center; gap:4px; }
+.qty-btn { width:36px; height:36px; border:2px solid var(--blue-main); background:#fff; color:var(--blue-main); font-size:1.2rem; font-weight:700; border-radius:8px; cursor:pointer; display:flex; align-items:center; justify-content:center; transition:all 0.18s; user-select:none; line-height:1; }
+.qty-btn:hover { background:var(--blue-main); color:#fff; }
+.qty-num { min-width:44px; text-align:center; font-size:1.1rem; font-weight:700; color:var(--blue-dark); }
 
 .billing { margin-top:24px; }
 .billing h3 { font-size:1.15rem; font-weight:700; margin-bottom:16px; }
 .field { margin-bottom:14px; }
 .field label { display:block; font-weight:600; margin-bottom:5px; font-size:0.93rem; }
 .field label span { color:red; }
-.field input, .field select, .field textarea {
-  width:100%; border:1.5px solid #ccc; border-radius:8px;
-  padding:12px 14px; font-family:'Hind Siliguri',sans-serif;
-  font-size:0.93rem; background:#fff; outline:none;
-  transition:border-color 0.2s;
-}
-.field input:focus, .field select:focus { border-color:var(--blue-main); }
+.field input,.field select { width:100%; border:1.5px solid #ccc; border-radius:8px; padding:12px 14px; font-family:'Hind Siliguri',sans-serif; font-size:0.93rem; background:#fff; outline:none; transition:border-color 0.2s; }
+.field input:focus,.field select:focus { border-color:var(--blue-main); }
 
-/* পেমেন্ট টাইপ বাটন */
-.pay-type-btn {
-  flex:1; padding:12px;
-  border-radius:8px;
-  font-family:'Hind Siliguri',sans-serif;
-  font-size:0.95rem;
-  font-weight:700;
-  cursor:pointer;
-  transition:all 0.2s;
-}
-.pay-type-btn.active-cod {
-  border:2px solid #2d8a2d;
-  background:#e8f5e8;
-  color:#1a5c1a;
-}
-.pay-type-btn.active-online {
-  border:2px solid #f47c00;
-  background:#fff3cd;
-  color:#c25f00;
-}
-.pay-type-btn.inactive {
-  border:2px solid #ccc;
-  background:#fff;
-  color:#555;
-}
+.pay-type-btn { flex:1; padding:12px; border-radius:8px; font-family:'Hind Siliguri',sans-serif; font-size:0.95rem; font-weight:700; cursor:pointer; transition:all 0.2s; }
+.pay-type-btn.active-cod { border:2px solid #2d8a2d; background:#e8f5e8; color:#1a5c1a; }
+.pay-type-btn.active-online { border:2px solid #f47c00; background:#fff3cd; color:#c25f00; }
+.pay-type-btn.inactive { border:2px solid #ccc; background:#fff; color:#555; }
 
 .ship-wrap { margin-top:20px; }
 .ship-wrap h3 { font-size:1.05rem; font-weight:700; margin-bottom:12px; }
-.ship-opt {
-  border:1.5px solid #ddd; border-radius:8px;
-  padding:12px 16px; display:flex;
-  justify-content:space-between; align-items:center;
-  cursor:pointer; background:#fff; margin-bottom:8px;
-  transition:border-color 0.2s;
-}
+.ship-opt { border:1.5px solid #ddd; border-radius:8px; padding:12px 16px; display:flex; justify-content:space-between; align-items:center; cursor:pointer; background:#fff; margin-bottom:8px; transition:border-color 0.2s; }
 .ship-opt.selected { border-color:var(--orange); background:#fff8f0; }
 .ship-opt .s-left { display:flex; align-items:center; gap:10px; font-weight:600; font-size:0.93rem; }
 .ship-opt input[type=radio] { accent-color:var(--orange); }
 
 .summary-wrap { margin-top:20px; }
 .summary-wrap h3 { font-size:1.05rem; font-weight:700; margin-bottom:12px; }
-.sum-row {
-  display:flex; justify-content:space-between;
-  padding:9px 0; border-bottom:1px solid #e0e0e0;
-  font-size:0.93rem;
-}
+.sum-row { display:flex; justify-content:space-between; padding:9px 0; border-bottom:1px solid #e0e0e0; font-size:0.93rem; }
 .sum-row.total { font-weight:700; font-size:1.05rem; border:none; }
-.prod-row {
-  display:flex; gap:12px; align-items:center;
-  padding:12px 0; border-bottom:1px solid #e0e0e0;
-}
-.prod-thumb {
-  width:66px; height:66px;
-  background:linear-gradient(135deg,#1a4db5,#0a2a5e);
-  border-radius:8px; display:flex; align-items:center;
-  justify-content:center; color:#fff; font-size:2rem; flex-shrink:0;
-}
+.prod-row { display:flex; gap:12px; align-items:center; padding:12px 0; border-bottom:1px solid #e0e0e0; }
+.prod-thumb { width:66px; height:66px; background:linear-gradient(135deg,#1a4db5,#0a2a5e); border-radius:8px; display:flex; align-items:center; justify-content:center; color:#fff; font-size:2rem; flex-shrink:0; }
 .prod-row .p-name { font-weight:600; flex:1; font-size:0.93rem; }
 .prod-row .p-price { font-weight:700; }
 
-.cod-box {
-  border:1.5px solid #ccc; border-radius:8px;
-  padding:13px 16px; font-size:0.88rem; color:#555;
-  background:#f7f7f7; margin-top:8px;
-}
-.btn-confirm {
-  display:block; width:100%;
-  background:linear-gradient(135deg,#f47c00,#c25f00);
-  color:#fff; font-family:'Hind Siliguri',sans-serif;
-  font-size:1.25rem; font-weight:700;
-  padding:18px; border-radius:10px; border:none;
-  cursor:pointer; margin-top:18px; margin-bottom:10px;
-  box-shadow:0 4px 18px rgba(244,124,0,0.4);
-  transition:transform 0.18s;
-}
+.btn-confirm { display:block; width:100%; background:linear-gradient(135deg,#f47c00,#c25f00); color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:1.25rem; font-weight:700; padding:18px; border-radius:10px; border:none; cursor:pointer; margin-top:18px; margin-bottom:10px; box-shadow:0 4px 18px rgba(244,124,0,0.4); transition:transform 0.18s; }
 .btn-confirm:hover { transform:translateY(-2px); }
-.confirm-note {
-  text-align:center; color:var(--blue-dark);
-  font-weight:700; font-size:1rem; margin-bottom:12px;
-}
-.btn-call {
-  display:block; width:100%;
-  background:linear-gradient(135deg,#128c1e,#25d366);
-  color:#fff; font-family:'Hind Siliguri',sans-serif;
-  font-size:1.05rem; font-weight:700;
-  padding:16px; border-radius:10px; border:none;
-  cursor:pointer; text-align:center;
-}
+.confirm-note { text-align:center; color:var(--blue-dark); font-weight:700; font-size:1rem; margin-bottom:12px; }
+.btn-call { display:block; width:100%; background:linear-gradient(135deg,#128c1e,#25d366); color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:1.05rem; font-weight:700; padding:16px; border-radius:10px; border:none; cursor:pointer; text-align:center; }
 
-/* ── FOOTER ── */
-footer {
-  background:linear-gradient(135deg,#0a2a5e,#06193a);
-  color:#b8d4ff; text-align:center;
-  padding:24px 20px; font-size:0.9rem;
-}
+footer { background:linear-gradient(135deg,#0a2a5e,#06193a); color:#b8d4ff; text-align:center; padding:24px 20px; font-size:0.9rem; }
 footer strong { color:#fff; }
-
-/* toast */
-#toast {
-  display:none; position:fixed; bottom:28px;
-  left:50%; transform:translateX(-50%);
-  background:#0a2a5e; color:#fff;
-  font-family:'Hind Siliguri',sans-serif;
-  font-size:1rem; font-weight:600;
-  padding:15px 30px; border-radius:10px;
-  box-shadow:0 6px 24px rgba(0,0,0,0.25);
-  z-index:999;
-}
-
+#toast { display:none; position:fixed; bottom:28px; left:50%; transform:translateX(-50%); background:#0a2a5e; color:#fff; font-family:'Hind Siliguri',sans-serif; font-size:1rem; font-weight:600; padding:15px 30px; border-radius:10px; box-shadow:0 6px 24px rgba(0,0,0,0.25); z-index:999; }
 .divider { height:1px; background:#e0e8ff; margin:0; }
 select option[value="N/A"] { display:none; }
 </style>
 </head>
 <body>
 
-<div class="topbar"> দ্রুত ডেলিভারি | <span>ক্যাশ অন ডেলিভারি</span> | সারাদেশে শিপিং</div>
+<div class="topbar">দ্রুত ডেলিভারি | <span>ক্যাশ অন ডেলিভারি</span> | সারাদেশে শিপিং</div>
 
 <nav class="navbar">
   <img src="innovalab_logo.png" alt="InnovaLAB" style="height:72px;width:auto;object-fit:contain;">
@@ -482,148 +192,87 @@ select option[value="N/A"] { display:none; }
     <p>সকল পণ্য অরিজিনাল ও ওয়ারেন্টি সহ</p>
     <div class="title-line"></div>
   </div>
-
   <div class="products-grid">
 
-    <div class="product-card" onclick="orderProduct('TP-Link WiFi Router AC1200','৩,৫০০')">
-      <div class="product-img blue-bg">
-        📡
-        <span class="badge-hot">Best Seller</span>
-      </div>
+    <div class="product-card" onclick="orderProduct('TP-Link WiFi Router AC1200')">
+      <div class="product-img blue-bg">📡<span class="badge-hot">Best Seller</span></div>
       <div class="product-body">
         <div class="product-brand">TP-Link</div>
         <div class="product-name">Archer C50 AC1200 Dual Band Router</div>
         <div class="product-desc">দ্রুতগতির WiFi, ৪টি LAN পোর্ট, সহজ সেটআপ। বাসা ও অফিসের জন্য পারফেক্ট।</div>
-        <div class="specs">
-          <span class="spec-tag">1200 Mbps</span>
-          <span class="spec-tag">Dual Band</span>
-          <span class="spec-tag">4 LAN Port</span>
-          <span class="spec-tag">ওয়ারেন্টি ১ বছর</span>
-        </div>
+        <div class="specs"><span class="spec-tag">1200 Mbps</span><span class="spec-tag">Dual Band</span><span class="spec-tag">4 LAN Port</span><span class="spec-tag">ওয়ারেন্টি ১ বছর</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">৪,২০০৳</div>
-            <div class="new-price">৩,৫০০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">৪,২০০৳</div><div class="new-price">৩,৫০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
     </div>
 
-    <div class="product-card" onclick="orderProduct('TP-Link TL-WR840N Router','১,৮০০')">
-      <div class="product-img blue-bg">
-        🌐
-        <span class="badge-new">নতুন</span>
-      </div>
+    <div class="product-card" onclick="orderProduct('TP-Link TL-WR840N Router')">
+      <div class="product-img blue-bg">🌐<span class="badge-new">নতুন</span></div>
       <div class="product-body">
         <div class="product-brand">TP-Link</div>
         <div class="product-name">TL-WR840N 300Mbps Wireless Router</div>
         <div class="product-desc">বাজেট ফ্রেন্ডলি রাউটার। ছোট বাসা ও দোকানের জন্য আদর্শ।</div>
-        <div class="specs">
-          <span class="spec-tag">300 Mbps</span>
-          <span class="spec-tag">4 LAN Port</span>
-          <span class="spec-tag">বাজেট ফ্রেন্ডলি</span>
-        </div>
+        <div class="specs"><span class="spec-tag">300 Mbps</span><span class="spec-tag">4 LAN Port</span><span class="spec-tag">বাজেট ফ্রেন্ডলি</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">২,২০০৳</div>
-            <div class="new-price">১,৮০০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">২,২০০৳</div><div class="new-price">১,৮০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
     </div>
 
-    <div class="product-card" onclick="orderProduct('Voltage Stabilizer 1000VA','২,২০০')">
-      <div class="product-img orange-bg">
-        ⚡
-        <span class="badge-sale">সেল</span>
-      </div>
+    <div class="product-card" onclick="orderProduct('Voltage Stabilizer 1000VA')">
+      <div class="product-img orange-bg">⚡<span class="badge-sale">সেল</span></div>
       <div class="product-body">
         <div class="product-brand">Rahimafrooz</div>
         <div class="product-name">Voltage Stabilizer 1000VA</div>
         <div class="product-desc">কারেন্ট ওঠানামা থেকে ইলেকট্রনিক্স রক্ষা করুন। টিভি, ফ্রিজ, কম্পিউটারের জন্য।</div>
-        <div class="specs">
-          <span class="spec-tag">1000VA</span>
-          <span class="spec-tag">Auto Voltage</span>
-          <span class="spec-tag">ওভারলোড প্রোটেকশন</span>
-        </div>
+        <div class="specs"><span class="spec-tag">1000VA</span><span class="spec-tag">Auto Voltage</span><span class="spec-tag">ওভারলোড প্রোটেকশন</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">২,৮০০৳</div>
-            <div class="new-price">২,২০০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">২,৮০০৳</div><div class="new-price">২,২০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
     </div>
 
-    <div class="product-card" onclick="orderProduct('AC to DC Converter 12V','৮৫০')">
-      <div class="product-img green-bg">
-        🔌
-        <span class="badge-new">নতুন</span>
-      </div>
+    <div class="product-card" onclick="orderProduct('AC to DC Converter 12V')">
+      <div class="product-img green-bg">🔌<span class="badge-new">নতুন</span></div>
       <div class="product-body">
         <div class="product-brand">Generic</div>
         <div class="product-name">AC to DC Power Converter 12V 5A</div>
         <div class="product-desc">220V AC থেকে 12V DC কনভার্ট করে। CCTV, LED স্ট্রিপ, Router পাওয়ার সাপ্লাই।</div>
-        <div class="specs">
-          <span class="spec-tag">12V Output</span>
-          <span class="spec-tag">5A Current</span>
-          <span class="spec-tag">60W Power</span>
-        </div>
+        <div class="specs"><span class="spec-tag">12V Output</span><span class="spec-tag">5A Current</span><span class="spec-tag">60W Power</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">১,১০০৳</div>
-            <div class="new-price">৮৫০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">১,১০০৳</div><div class="new-price">৮৫০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
     </div>
 
-    <div class="product-card" onclick="orderProduct('UPS 650VA','৪,৫০০')">
-      <div class="product-img purple-bg">
-        🔋
-        <span class="badge-hot">জনপ্রিয়</span>
-      </div>
+    <div class="product-card" onclick="orderProduct('UPS 650VA')">
+      <div class="product-img purple-bg">🔋<span class="badge-hot">জনপ্রিয়</span></div>
       <div class="product-body">
         <div class="product-brand">Microtek</div>
         <div class="product-name">UPS 650VA Offline</div>
         <div class="product-desc">লোডশেডিংয়ে নিরবচ্ছিন্ন বিদ্যুৎ। কম্পিউটার ও রাউটার চালু রাখুন।</div>
-        <div class="specs">
-          <span class="spec-tag">650VA</span>
-          <span class="spec-tag">Battery Backup</span>
-          <span class="spec-tag">Surge Protection</span>
-        </div>
+        <div class="specs"><span class="spec-tag">650VA</span><span class="spec-tag">Battery Backup</span><span class="spec-tag">Surge Protection</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">৫,৫০০৳</div>
-            <div class="new-price">৪,৫০০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">৫,৫০০৳</div><div class="new-price">৪,৫০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
     </div>
 
-    <div class="product-card" onclick="orderProduct('Network Switch 8 Port','১,৪০০')">
-      <div class="product-img blue-bg">
-        🔗
-      </div>
+    <div class="product-card" onclick="orderProduct('Network Switch 8 Port')">
+      <div class="product-img blue-bg">🔗</div>
       <div class="product-body">
         <div class="product-brand">TP-Link</div>
         <div class="product-name">8-Port Fast Ethernet Switch</div>
         <div class="product-desc">অফিস বা বাসায় একাধিক ডিভাইসে ইন্টারনেট সংযোগ দিন।</div>
-        <div class="specs">
-          <span class="spec-tag">8 Port</span>
-          <span class="spec-tag">100Mbps</span>
-          <span class="spec-tag">Plug & Play</span>
-        </div>
+        <div class="specs"><span class="spec-tag">8 Port</span><span class="spec-tag">100Mbps</span><span class="spec-tag">Plug & Play</span></div>
         <div class="product-footer">
-          <div class="price-box">
-            <div class="old-price">১,৮০০৳</div>
-            <div class="new-price">১,৪০০৳</div>
-          </div>
+          <div class="price-box"><div class="old-price">১,৮০০৳</div><div class="new-price">১,৪০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
@@ -635,10 +284,7 @@ select option[value="N/A"] { display:none; }
 <div class="divider"></div>
 
 <section class="reviews-section" id="reviews">
-  <div class="section-title">
-    <h2>কাস্টমারদের মতামত</h2>
-    <div class="title-line"></div>
-  </div>
+  <div class="section-title"><h2>কাস্টমারদের মতামত</h2><div class="title-line"></div></div>
   <div class="reviews-track-wrap">
     <div class="reviews-track" id="reviewsTrack"></div>
   </div>
@@ -664,10 +310,10 @@ select option[value="N/A"] { display:none; }
   <h2>অর্ডার করতে নিচের ফর্মটি পূরণ করুন এবং Confirm Order এ ক্লিক করুন<br>
   <small style="font-size:0.82em;color:#555;">(অর্ডার দিয়ে পণ্য না নিলে ডেলিভারি চার্জ দিতে হবে)</small></h2>
 
-  <!-- প্যাকেজ সিলেক্ট -->
+  <!-- পণ্য সিলেক্ট -->
   <div class="pkg-label">কোন পণ্যটি নিতে চান সিলেক্ট করুন :</div>
   <div class="pkg-grid">
-    <div class="pkg-opt" id="pkg1" onclick="selectPkg(0)">
+    <div class="pkg-opt" id="pkg0" onclick="selectPkg(0)">
       <input type="radio" name="pkg">
       <div class="info">
         <div class="p-name">TP-Link AC1200 Router</div>
@@ -676,7 +322,7 @@ select option[value="N/A"] { display:none; }
       </div>
       <span class="badge-pkg">Best Seller</span>
     </div>
-    <div class="pkg-opt selected" id="pkg2" onclick="selectPkg(1)">
+    <div class="pkg-opt selected" id="pkg1" onclick="selectPkg(1)">
       <input type="radio" name="pkg" checked>
       <div class="info">
         <div class="p-name">TP-Link 300Mbps Router</div>
@@ -684,7 +330,7 @@ select option[value="N/A"] { display:none; }
         <div class="p-amount">১,৮০০৳</div>
       </div>
     </div>
-    <div class="pkg-opt" id="pkg3" onclick="selectPkg(2)">
+    <div class="pkg-opt" id="pkg2" onclick="selectPkg(2)">
       <input type="radio" name="pkg">
       <div class="info">
         <div class="p-name">Voltage Stabilizer 1000VA</div>
@@ -693,7 +339,7 @@ select option[value="N/A"] { display:none; }
       </div>
       <span class="badge-pkg" style="background:linear-gradient(135deg,#c25f00,#f4a800);">সেল</span>
     </div>
-    <div class="pkg-opt" id="pkg4" onclick="selectPkg(3)">
+    <div class="pkg-opt" id="pkg3" onclick="selectPkg(3)">
       <input type="radio" name="pkg">
       <div class="info">
         <div class="p-name">UPS 650VA</div>
@@ -703,9 +349,19 @@ select option[value="N/A"] { display:none; }
     </div>
   </div>
 
+  <!-- Quantity বক্স -->
+  <div class="qty-box">
+    <div class="qty-box-label">📦 পরিমাণ (Quantity)</div>
+    <div class="qty-controls">
+      <button class="qty-btn" onclick="changeQty(-1)">−</button>
+      <div class="qty-num" id="qtyNum">1</div>
+      <button class="qty-btn" onclick="changeQty(1)">+</button>
+    </div>
+  </div>
+
+  <!-- বিলিং -->
   <div class="billing">
     <h3>আপনার তথ্য দিন</h3>
-
     <div class="field">
       <label>আপনার নাম <span>*</span></label>
       <input type="text" id="cname" placeholder="এখানে আপনার নাম লিখুন">
@@ -723,24 +379,16 @@ select option[value="N/A"] { display:none; }
       <select><option>Bangladesh</option></select>
     </div>
 
-    <!-- ── পেমেন্ট পদ্ধতি ── -->
+    <!-- পেমেন্ট পদ্ধতি -->
     <div style="background:#fff3cd;border:2px solid #f47c00;border-radius:10px;padding:16px;margin-bottom:14px;">
       <div style="font-weight:700;font-size:1rem;color:#c25f00;margin-bottom:12px;">💳 পেমেন্ট পদ্ধতি বেছে নিন</div>
       <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
-        <button type="button" id="btnCOD" onclick="setPayType('cod')" class="pay-type-btn active-cod">
-          💵 ক্যাশ অন ডেলিভারি
-        </button>
-        <button type="button" id="btnOnline" onclick="setPayType('online')" class="pay-type-btn inactive">
-          📱 অগ্রিম পেমেন্ট
-        </button>
+        <button type="button" id="btnCOD" onclick="setPayType('cod')" class="pay-type-btn active-cod">💵 ক্যাশ অন ডেলিভারি</button>
+        <button type="button" id="btnOnline" onclick="setPayType('online')" class="pay-type-btn inactive">📱 অগ্রিম পেমেন্ট</button>
       </div>
-
-      <!-- COD message -->
       <div id="codInfo" style="background:#e8f5e8;border:1.5px solid #2d8a2d;border-radius:8px;padding:12px;color:#1a5c1a;font-weight:600;font-size:0.92rem;">
         ✅ পণ্য হাতে পেয়ে টাকা দিন — কোনো অগ্রিম পেমেন্ট লাগবে না।
       </div>
-
-      <!-- Online payment fields -->
       <div id="onlinePayFields" style="display:none;">
         <div class="field" style="margin-top:12px;margin-bottom:8px;">
           <label>পেমেন্ট মাধ্যম</label>
@@ -762,7 +410,6 @@ select option[value="N/A"] { display:none; }
         </div>
       </div>
     </div>
-
   </div>
 
   <!-- শিপিং -->
@@ -785,8 +432,8 @@ select option[value="N/A"] { display:none; }
       <span>Product</span><span>Subtotal</span>
     </div>
     <div class="prod-row">
-      <div class="prod-thumb">📡</div>
-      <div class="p-name" id="sumProdName">TP-Link 300Mbps Router</div>
+      <div class="prod-thumb" id="sumThumb">🌐</div>
+      <div class="p-name" id="sumProdName">TP-Link 300Mbps Router × 1</div>
       <div class="p-price" id="sumProdPrice">১,৮০০৳</div>
     </div>
     <div class="sum-row"><span>Subtotal</span><span id="sumSubtotal">১,৮০০৳</span></div>
@@ -809,16 +456,16 @@ select option[value="N/A"] { display:none; }
 
 <script>
 // ── REVIEWS ──────────────────────────────────────────
-const reviews = [
-  { name:'Rahim Uddin', text:'Router টা অনেক ভালো, সিগন্যাল একদম স্ট্রং। দ্রুত ডেলিভারিও পেয়েছি।' },
-  { name:'Nasrin Akter', text:'Voltage stabilizer কাজ করছে দারুণ, আমার ফ্রিজ এখন নিরাপদ।' },
-  { name:'Kamal Hossain', text:'অরিজিনাল পণ্য পেয়েছি, দাম অনেক কম। আবার অর্ডার করবো।' },
-  { name:'Sumaiya Islam', text:'UPS টা নিলাম, লোডশেডিংয়ে এখন আর সমস্যা নেই।' },
-  { name:'Milon Chandra', text:'TP-Link router সেটআপ অনেক সহজ ছিল। ভালো সার্ভিস।' },
-  { name:'Fatema Begum', text:'পণ্য হাতে পেয়ে টাকা দিয়েছি, কোনো ঝামেলা নেই।' },
-  { name:'Jakir Hossain', text:'Converter নিলাম CCTV এর জন্য। পারফেক্ট কাজ হচ্ছে।' },
+const reviews=[
+  {name:'Rahim Uddin',text:'Router টা অনেক ভালো, সিগন্যাল একদম স্ট্রং। দ্রুত ডেলিভারিও পেয়েছি।'},
+  {name:'Nasrin Akter',text:'Voltage stabilizer কাজ করছে দারুণ, আমার ফ্রিজ এখন নিরাপদ।'},
+  {name:'Kamal Hossain',text:'অরিজিনাল পণ্য পেয়েছি, দাম অনেক কম। আবার অর্ডার করবো।'},
+  {name:'Sumaiya Islam',text:'UPS টা নিলাম, লোডশেডিংয়ে এখন আর সমস্যা নেই।'},
+  {name:'Milon Chandra',text:'TP-Link router সেটআপ অনেক সহজ ছিল। ভালো সার্ভিস।'},
+  {name:'Fatema Begum',text:'পণ্য হাতে পেয়ে টাকা দিয়েছি, কোনো ঝামেলা নেই।'},
+  {name:'Jakir Hossain',text:'Converter নিলাম CCTV এর জন্য। পারফেক্ট কাজ হচ্ছে।'},
 ];
-const track = document.getElementById('reviewsTrack');
+const track=document.getElementById('reviewsTrack');
 [...reviews,...reviews].forEach(r=>{
   const c=document.createElement('div');
   c.className='review-card';
@@ -833,27 +480,33 @@ const pkgs=[
   {name:'Voltage Stabilizer 1000VA',price:2200,icon:'⚡'},
   {name:'UPS 650VA',price:4500,icon:'🔋'},
 ];
-let selPkg=1, shipCost=100, shipLabel='ঢাকার বাইরে', payType='cod';
+let selPkg=1, shipCost=100, shipLabel='ঢাকার বাইরে', payType='cod', qty=1;
 
-// আপনার পেমেন্ট নম্বর এখানে দিন
-const adminNumbers = {
-  'বিকাশ': '01738-664382',
-  'নগদ':   '01738-664382',
-  'রকেট':  '01738-664382'
+const adminNumbers={
+  'বিকাশ':'01518-380199',
+  'নগদ':  '01518-469198',
+  'রকেট': '01518-380199'
 };
 
 function fmt(n){return n.toLocaleString('en-BD')+'৳';}
 
 function updateSummary(){
   const p=pkgs[selPkg];
-  const total=p.price+shipCost;
-  document.getElementById('sumProdName').textContent=p.name;
-  document.getElementById('sumProdPrice').textContent=fmt(p.price);
-  document.querySelector('.prod-thumb').textContent=p.icon;
-  document.getElementById('sumSubtotal').textContent=fmt(p.price);
+  const subtotal=p.price*qty;
+  const total=subtotal+shipCost;
+  document.getElementById('sumThumb').textContent=p.icon;
+  document.getElementById('sumProdName').textContent=p.name+' × '+qty;
+  document.getElementById('sumProdPrice').textContent=fmt(subtotal);
+  document.getElementById('sumSubtotal').textContent=fmt(subtotal);
   document.getElementById('sumShipping').textContent=shipLabel+': '+fmt(shipCost);
   document.getElementById('sumTotal').textContent=fmt(total);
   document.getElementById('confirmTotalBtn').textContent=fmt(total);
+}
+
+function changeQty(delta){
+  qty=Math.max(1,Math.min(20,qty+delta));
+  document.getElementById('qtyNum').textContent=qty;
+  updateSummary();
 }
 
 function selectPkg(idx){
@@ -876,7 +529,7 @@ function selectShip(el,cost,label){
   updateSummary();
 }
 
-function orderProduct(name,price){
+function orderProduct(name){
   const idx=pkgs.findIndex(p=>p.name.includes(name.split(' ')[0]));
   if(idx>=0) selectPkg(idx);
   document.getElementById('order').scrollIntoView({behavior:'smooth'});
@@ -884,30 +537,24 @@ function orderProduct(name,price){
 
 function setPayType(type){
   payType=type;
-  const codInfo=document.getElementById('codInfo');
-  const onlineFields=document.getElementById('onlinePayFields');
-  const btnCOD=document.getElementById('btnCOD');
-  const btnOnline=document.getElementById('btnOnline');
-
   if(type==='cod'){
-    codInfo.style.display='block';
-    onlineFields.style.display='none';
-    btnCOD.className='pay-type-btn active-cod';
-    btnOnline.className='pay-type-btn inactive';
+    document.getElementById('codInfo').style.display='block';
+    document.getElementById('onlinePayFields').style.display='none';
+    document.getElementById('btnCOD').className='pay-type-btn active-cod';
+    document.getElementById('btnOnline').className='pay-type-btn inactive';
   } else {
-    codInfo.style.display='none';
-    onlineFields.style.display='block';
-    btnOnline.className='pay-type-btn active-online';
-    btnCOD.className='pay-type-btn inactive';
+    document.getElementById('codInfo').style.display='none';
+    document.getElementById('onlinePayFields').style.display='block';
+    document.getElementById('btnOnline').className='pay-type-btn active-online';
+    document.getElementById('btnCOD').className='pay-type-btn inactive';
   }
 }
 
 function showPayInfo(){
   const method=document.getElementById('payMethod').value;
   const infoBox=document.getElementById('payInfo');
-  if(method==='N/A'){
-    infoBox.style.display='none';
-  } else {
+  if(method==='N/A'){ infoBox.style.display='none'; }
+  else {
     infoBox.style.display='block';
     infoBox.innerHTML=`✅ <strong>${method}</strong> নম্বর: <strong>${adminNumbers[method]}</strong> — এই নম্বরে পেমেন্ট করুন`;
   }
@@ -917,27 +564,25 @@ function confirmOrder(){
   const n=document.getElementById('cname').value.trim();
   const a=document.getElementById('caddress').value.trim();
   const p=document.getElementById('cphone').value.trim();
+  if(!n||!a||!p){ alert('অনুগ্রহ করে নাম, ঠিকানা ও ফোন নম্বর দিন।'); return; }
 
-  if(!n||!a||!p){
-    alert('অনুগ্রহ করে নাম, ঠিকানা ও ফোন নম্বর দিন।');
-    return;
-  }
-
-  const payMethod = payType==='cod' ? 'COD' : (document.getElementById('payMethod').value || 'N/A');
-  const payNum   = payType==='cod' ? 'N/A' : (document.getElementById('payNumber').value.trim() || 'N/A');
-  const trx      = payType==='cod' ? 'N/A' : (document.getElementById('trxID').value.trim() || 'N/A');
+  const payMethod=payType==='cod'?'COD':(document.getElementById('payMethod').value||'N/A');
+  const payNum=payType==='cod'?'N/A':(document.getElementById('payNumber').value.trim()||'N/A');
+  const trx=payType==='cod'?'N/A':(document.getElementById('trxID').value.trim()||'N/A');
 
   const confirmBtn=document.querySelector('.btn-confirm');
-  const originalBtnText=confirmBtn.innerHTML;
+  const origText=confirmBtn.innerHTML;
   confirmBtn.disabled=true;
   confirmBtn.innerHTML='⌛ অর্ডার প্রসেস হচ্ছে...';
 
   const p_data=pkgs[selPkg];
-  const total_val=p_data.price+shipCost;
+  const subtotal=p_data.price*qty;
+  const total_val=subtotal+shipCost;
 
   const orderData={
     name:n, address:a, phone:p,
     product:p_data.name,
+    quantity:qty,
     totalPrice:fmt(total_val),
     paymentMethod:payMethod,
     paymentNumber:payNum,
@@ -946,14 +591,12 @@ function confirmOrder(){
 
   const scriptUrl="https://script.google.com/macros/s/AKfycbxSE0t15RoJ4eSBtJDB6oCjh2Z_oA8PzsujbG6QBAix9DXpXWtIIpXbCZnbziqrrrKgHA/exec";
 
-  fetch(scriptUrl,{
-    method:'POST', mode:'no-cors', cache:'no-cache',
-    body:JSON.stringify(orderData)
-  })
+  fetch(scriptUrl,{method:'POST',mode:'no-cors',cache:'no-cache',body:JSON.stringify(orderData)})
   .then(()=>{
     document.getElementById('cname').value='';
     document.getElementById('caddress').value='';
     document.getElementById('cphone').value='';
+    qty=1; document.getElementById('qtyNum').textContent='1';
     if(payType==='online'){
       document.getElementById('payNumber').value='';
       document.getElementById('trxID').value='';
@@ -962,16 +605,17 @@ function confirmOrder(){
     }
     setPayType('cod');
     confirmBtn.disabled=false;
-    confirmBtn.innerHTML=originalBtnText;
+    confirmBtn.innerHTML=origText;
+    updateSummary();
     const t=document.getElementById('toast');
     t.style.display='block';
     setTimeout(()=>{t.style.display='none';},5000);
   })
-  .catch(error=>{
-    console.error('Error:',error);
+  .catch(err=>{
+    console.error(err);
     alert('অর্ডারটি নেওয়া হয়েছে (টেস্ট মোড)।');
     confirmBtn.disabled=false;
-    confirmBtn.innerHTML=originalBtnText;
+    confirmBtn.innerHTML=origText;
   });
 }
 
