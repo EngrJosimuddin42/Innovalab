@@ -6,7 +6,7 @@
 <title>InnovaLAB BD - Future of Innovation</title>
 <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-<link rel="stylesheet" href="style.css"> </head>
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
 
 <section class="hero">
   <h1>Router, Converter ও <span>Electronics পণ্য</span><br>সেরা দামে — সারাদেশে ডেলিভারি</h1>
-  <p>অরিজিনাল পণ্য, ওয়ারেন্টি সহ। ঘরে বসে অর্ডার করুন — হাতে পেয়ে টাকা দিন।</p>
+  <p>অরিজিনাল পণ্য, ওয়ারেন্টি সহ। ঘরে বসে অর্ডার করুন — হাতে পেয়ে টাকা দিন。</p>
   <div class="hero-btns">
     <a href="#products" class="btn-primary">পণ্য দেখুন 👇</a>
     <a href="#order" class="btn-secondary">অর্ডার করুন</a>
@@ -55,7 +55,7 @@
       <div class="product-body">
         <div class="product-brand">TP-Link</div>
         <div class="product-name">Archer C50 AC1200 Dual Band Router</div>
-        <div class="product-desc">দ্রুতগতির WiFi, ৪টি LAN পোর্ট, সহজ সেটআপ। বাসা ও অফিসের জন্য পারফেক্ট।</div>
+        <div class="product-desc">দ্রুতগতির WiFi, ৪টি LAN পোর্ট, সহজ সেটআপ। বাসা ও অফিসের জন্য পারфেক্ট।</div>
         <div class="specs"><span class="spec-tag">1200 Mbps</span><span class="spec-tag">Dual Band</span><span class="spec-tag">4 LAN Port</span><span class="spec-tag">ওয়ারেন্টি ১ বছর</span></div>
         <div class="product-footer">
           <div class="price-box"><div class="old-price">৪,২০০৳</div><div class="new-price">৩,৫০০৳</div></div>
@@ -72,7 +72,7 @@
         <div class="product-desc">বাজেট ফ্রেন্ডলি রাউটার। ছোট বাসা ও দোকানের জন্য আদর্শ।</div>
         <div class="specs"><span class="spec-tag">300 Mbps</span><span class="spec-tag">4 LAN Port</span><span class="spec-tag">বাজেট ফ্রেন্ডলি</span></div>
         <div class="product-footer">
-          <div class="price-box"><div class="old-price">২,২০০৳</div><div class="new-price">১,৮০০৳</div></div>
+          <div class="price-box"><div class="old-price">২,২২০৳</div><div class="new-price">১,৮০০৳</div></div>
           <button class="btn-order">অর্ডার করুন</button>
         </div>
       </div>
@@ -235,8 +235,8 @@
       <select><option>Bangladesh</option></select>
     </div>
 
-    <!-- পেমেন্ট পদ্ধতি -->
-    <div style="background:#fff3cd;border:2px solid #f47c00;border-radius:10px;padding:16px;margin-bottom:14px;">
+    <!-- পেমেন্ট পদ্ধতি (ডিফল্টভাবে hide থাকে) -->
+    <div id="paymentMethodSection" style="background:#fff3cd;border:2px solid #f47c00;border-radius:10px;padding:16px;margin-bottom:14px;display:none;">
       <div style="font-weight:700;font-size:1rem;color:#c25f00;margin-bottom:12px;">💳 পেমেন্ট পদ্ধতি বেছে নিন</div>
       <div style="display:flex;gap:10px;margin-bottom:14px;flex-wrap:wrap;">
         <button type="button" id="btnCOD" onclick="setPayType('cod')" class="pay-type-btn active-cod">💵 ক্যাশ অন ডেলিভারি</button>
@@ -297,9 +297,15 @@
     <div class="sum-row total"><span>Total</span><span id="sumTotal">১,৯০০৳</span></div>
   </div>
 
-  <button class="btn-confirm" onclick="confirmOrder()">🔒 Confirm Order — <span id="confirmTotalBtn">১,৯০০৳</span></button>
-  <div class="confirm-note">অর্ডার কনফার্ম করতে উপরের বাটনে ক্লিক করুন</div>
-  <a href="tel:+8801518380199" class="btn-call">📞 Click to Call</a>
+  <!-- "Proceed to Payment" বাটন -->
+  <button type="button" id="btnProceedPayment" class="btn-confirm" onclick="showPaymentOptions()" style="background-color: #007bff; margin-bottom: 10px;">👉 Proceed to Payment</button>
+
+  <!-- কনফার্ম বাটন সেকশন (ডিফল্টভাবে hide থাকবে) -->
+  <div id="confirmOrderSection" style="display:none;">
+    <button id="finalConfirmBtn" class="btn-confirm" onclick="confirmOrder()">🔒 Confirm Order — <span id="confirmTotalBtn">১,৯০০৳</span></button>
+    <div class="confirm-note">অর্ডার কনফার্ম করতে উপরের বাটনে ক্লিক করুন</div>
+    <a href="tel:+8801518380199" class="btn-call">📞 Click to Call</a>
+  </div>
 </div>
 </div>
 
@@ -310,5 +316,6 @@
 
 <div id="toast">✅ অর্ডার নেওয়া হয়েছে! শীঘ্রই যোগাযোগ করা হবে।</div>
 
-<script src="script.js"></script> </body>
+<script src="script.js"></script> 
+</body>
 </html>
