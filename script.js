@@ -1,21 +1,22 @@
-
 // ── REVIEWS ──────────────────────────────────────────
 const reviews=[
   {name:'Rahim Uddin',text:'Router টা অনেক ভালো, সিগন্যাল একদম স্ট্রং। দ্রুত ডেলিভারিও পেয়েছি।'},
   {name:'Nasrin Akter',text:'Voltage stabilizer কাজ করছে দারুণ, আমার ফ্রিজ এখন নিরাপদ।'},
-  {name:'Kamal Hossain',text:'অরিজিনাল পণ্য পেয়েছি, দাম অনেক কম। আবার অর্ডার করবো।'},
+  {name:'Kamal Hossain',text:'অরিじんাল পণ্য পেয়েছি, দাম অনেক কম। আবার অর্ডার করবো।'},
   {name:'Sumaiya Islam',text:'UPS টা নিলাম, লোডশেডিংয়ে এখন আর সমস্যা নেই।'},
   {name:'Milon Chandra',text:'TP-Link router সেটআপ অনেক সহজ ছিল। ভালো সার্ভিস।'},
   {name:'Fatema Begum',text:'পণ্য হাতে পেয়ে টাকা দিয়েছি, কোনো ঝামেলা নেই।'},
   {name:'Jakir Hossain',text:'Converter নিলাম CCTV এর জন্য। পারফেক্ট কাজ হচ্ছে।'},
 ];
 const track=document.getElementById('reviewsTrack');
-[...reviews,...reviews].forEach(r=>{
-  const c=document.createElement('div');
-  c.className='review-card';
-  c.innerHTML=`<div class="r-name">${r.name}</div><p>${r.text}</p><div class="r-stars">★★★★★</div>`;
-  track.appendChild(c);
-});
+if(track) {
+  [...reviews,...reviews].forEach(r=>{
+    const c=document.createElement('div');
+    c.className='review-card';
+    c.innerHTML=`<div class="r-name">${r.name}</div><p>${r.text}</p><div class="r-stars">★★★★★</div>`;
+    track.appendChild(c);
+  });
+}
 
 // ── ORDER LOGIC ───────────────────────────────────────
 const pkgs=[
@@ -104,6 +105,24 @@ function showPayInfo(){
   }
 }
 
+// PROCEED TO PAYMENT FUNCTION
+function showPaymentOptions() {
+  const name = document.getElementById('cname').value.trim();
+  const address = document.getElementById('caddress').value.trim();
+  const phone = document.getElementById('cphone').value.trim();
+
+  if (!name || !address || !phone) {
+    alert('অনুগ্রহ করে পেমেন্ট ধাপে যাওয়ার আগে নাম, ঠিকানা ও ফোন নম্বর দিন।');
+    return;
+  }
+
+  document.getElementById('paymentMethodSection').style.display = 'block';
+  document.getElementById('confirmOrderSection').style.display = 'block';
+  document.getElementById('btnProceedPayment').style.display = 'none';
+
+  document.getElementById('paymentMethodSection').scrollIntoView({ behavior: 'smooth' });
+}
+
 function confirmOrder(){
   const n=document.getElementById('cname').value.trim();
   const a=document.getElementById('caddress').value.trim();
@@ -114,7 +133,7 @@ function confirmOrder(){
   const payNum=payType==='cod'?'N/A':(document.getElementById('payNumber').value.trim()||'N/A');
   const trx=payType==='cod'?'N/A':(document.getElementById('trxID').value.trim()||'N/A');
 
-  const confirmBtn=document.querySelector('.btn-confirm');
+  const confirmBtn=document.getElementById('finalConfirmBtn');
   const origText=confirmBtn.innerHTML;
   confirmBtn.disabled=true;
   confirmBtn.innerHTML='⌛ অর্ডার প্রসেস হচ্ছে...';
@@ -162,4 +181,6 @@ function confirmOrder(){
     confirmBtn.innerHTML=origText;
   });
 }
+
+// Initial Run
 updateSummary();
