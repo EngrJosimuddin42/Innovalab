@@ -162,3 +162,4 @@ function confirmOrder(){
     confirmBtn.innerHTML=origText;
   });
 }
+updateSummary();
